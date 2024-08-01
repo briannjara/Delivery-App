@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+
+
+
+:root{
+  --text-color: #49557e;
+  --main: tomato;
+  --text-main: white;
+  --border: 2px solid tomato;
+  --transition: all 0.3s ease;
+  --text-secondary: #808080;
+  --footer-bg: #323232;
+  --hr-color: grey;
+
+}
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Outfit;
+  scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar{
+  display: none;
+}
+
+
+
+body{
+  min-height: 100vh;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.app{
+  width: 80%;
+  margin: auto;
+}
