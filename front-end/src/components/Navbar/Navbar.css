@@ -1,47 +1,59 @@
 .navbar{
-    padding: 20px 0px;
+    padding: 15px 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* backdrop-filter: blur(10px) brightness(50%);   */
-    background: rgba(201, 87, 5, 0.5);
-    z-index: 2;
-    position:fixed;
-    width: 80%;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
     top: 0;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    left: 0;
 }
 
 .navbar .logo{
-    width: 150px;
+    width: 130px;
+    height: auto;
 }
 
 .navbar-menu{
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 2.5rem;
     color: var(--text-color);
-    font-size: 18px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar-menu li{
     cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.navbar-menu li:hover{
+    color: var(--main);
 }
 
 .navbar-right{
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 2rem;
 }
 
 .navbar button{
-    background: transparent;
-    font-size: 16px;
+    background: var(--button-bg, transparent);
+    font-size: 1rem;
     color: var(--text-color);
-    border: var(--border);
-    padding: 10px 30px;
-    border-radius: 50px;
+    border: 2px solid var(--border-color, #ccc);
+    padding: 0.6rem 1.5rem;
+    border-radius: 25px;
     cursor: pointer;
-    transition: var(--transition);
+    transition: all 0.3s ease;
 }
 
 .navbar button:hover{
@@ -51,7 +63,7 @@
 
 .navbar .active{
     padding-bottom: 2px;
-    border-bottom: var(--border);
+    border-bottom: 2px solid var(--main);
 }
 
 
@@ -64,7 +76,7 @@
     min-width: 10px;
     min-height: 10px;
     background-color: var(--main);
-    border-radius: 5px;
+    border-radius: 50%;
     top: -8px;
     right: -8px;
 
@@ -72,16 +84,21 @@
 
 
 @media (max-width:1050px){
+    .navbar {
+        padding: 0.8rem 1.5rem;
+    }
+    
     .navbar .logo{
-        width: 140px;
+        width: 120px;
     }
+    
     .navbar-menu{
-        gap: 20px;
-        font-size: 17px;
+        gap: 2rem;
+        font-size: 1rem;
     }
-
+    
     .navbar-right{
-        gap: 30px;
+        gap: 1.5rem;
     }
 
     .navbar-right img{
@@ -89,7 +106,7 @@
     }
 
     .navbar-right button{
-        padding: 8px 25px;
+        padding: 8px 20px;
     }
 
  
@@ -98,16 +115,21 @@
 
 
 @media (max-width:900px){
+    .navbar {
+        padding: 0.8rem 1rem;
+    }
+    
     .navbar .logo{
-        width: 150px;
+        width: 110px;
     }
+    
     .navbar-menu{
-        gap: 15px;
-        font-size: 16px;
+        gap: 1.5rem;
+        font-size: 0.95rem;
     }
-
+    
     .navbar-right{
-        gap: 30px;
+        gap: 1.2rem;
     }
 
     .navbar-right img{
@@ -115,15 +137,18 @@
     }
 
     .navbar-right button{
-        padding: 7px 20px;
-        font-size: 15px;
+        padding: 0.5rem 1.2rem;
+        font-size: 0.9rem;
     }
 
     
 }
 
 @media (max-width:750px){
-
+    .navbar {
+        padding: 0.8rem 1rem;
+    }
+    
     .navbar-menu{
        display: none;
     }
